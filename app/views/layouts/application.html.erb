@@ -10,6 +10,20 @@
   </head>
 
   <body>
+    <nav class="navbar">
+      <ul>
+        <li><%= link_to "member-only", '#' %></li>
+        <li><%= link_to "Posts", '#' %></li>
+        <li><%= link_to "Login", '#' %></li>
+        <li><%= link_to "snippets", static_pages_snippets_path %></li>
+        <li><%= link_to "newsletter", static_pages_newsletter_path %></li>
+        <li><%= link_to "jobs", static_pages_jobs_path %></li>
+        <li><%= link_to "videos", static_pages_videos_path %></li>
+        <li><%= link_to "guides", static_pages_guides_path  %></li>
+        <input type="search">
+      </ul>
+    </nav>
     <%= yield %>
+
   </body>
 </html>
