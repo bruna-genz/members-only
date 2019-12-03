@@ -1,9 +1,46 @@
+* {
+   margin: 0;
+   padding: 0;
+   box-sizing: border-box;
+   background-color: #100e17;
+   color: #ffffff;
+}
+
 .navbar {
     display: grid;
     grid-template-columns: repeat(9, 1fr);
     grid-template-rows: 1fr;
     grid-column-gap: 0px;
     grid-row-gap: 0px;
+    position: fixed;
+    top: 0;
+    height: 140px;
+    width: 100%;
+    #logo {
+        font-size: 40px;
+        width: 320px;
+        border-left: none;
     }
+    #search-box {
+        width: 475px;
+    }
+    div {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        font-family: 'Rubik', sans-serif;
+        border-bottom: solid thin rgba(68, 67, 67, 0.411);
+        border-left: solid thin rgba(68, 67, 67, 0.411);
+        a {
+            text-decoration: none;
+        }
+        .icon {
+            height: 50px;
+            width: 100px;
+        }
+    }
+}
+
+
     
     

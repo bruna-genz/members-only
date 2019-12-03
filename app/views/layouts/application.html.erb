@@ -7,21 +7,23 @@
 
     <%= stylesheet_link_tag 'application', media: 'all', 'data-turbolinks-track': 'reload' %>
     <%= javascript_pack_tag 'application', 'data-turbolinks-track': 'reload' %>
+    <link href="https://fonts.googleapis.com/css?family=Rubik&display=swap" rel="stylesheet">
+    <script src="/all.min.js"></script> 
   </head>
 
   <body>
     <nav class="navbar">
-      <ul>
-        <li><%= link_to "member-only", '#' %></li>
-        <li><%= link_to "Posts", '#' %></li>
-        <li><%= link_to "Login", '#' %></li>
-        <li><%= link_to "snippets", static_pages_snippets_path %></li>
-        <li><%= link_to "newsletter", static_pages_newsletter_path %></li>
-        <li><%= link_to "jobs", static_pages_jobs_path %></li>
-        <li><%= link_to "videos", static_pages_videos_path %></li>
-        <li><%= link_to "guides", static_pages_guides_path  %></li>
-        <input type="search">
-      </ul>
+      <div id="logo"><%= link_to "Members Only", '#' %></div>
+      <div><i class="fas fa-newspaper"></i><%= link_to "Posts", '#' %></div>
+      <div><%= link_to "Login", '#' %></div>
+      <div><%= link_to "Snippets", static_pages_snippets_path %></div>
+      <div><%= link_to "Newsletter", static_pages_newsletter_path %></div>
+      <div><%= link_to "Jobs", static_pages_jobs_path %></div>
+      <div><%= link_to "Videos", static_pages_videos_path %></div>
+      <div><%= link_to "Guides", static_pages_guides_path  %></div>
+      <div id="search-box">
+          <input type="search">
+      </div>
     </nav>
     <%= yield %>
 
