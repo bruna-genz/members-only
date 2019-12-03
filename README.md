@@ -1,24 +1,25 @@
-# README
+# Members Only
 
-This README would normally document whatever steps are necessary to get the
-application up and running.
+In this app we created a blog where users can post comments, but only members can see the authors. It has the following functionalities:
 
-Things you may want to cover:
+- Sign up new members;
+- Authenticate members;
+- Remember logged in users;
+- Create new posts.
 
-* Ruby version
+## Built with
 
-* System dependencies
+- HTML 5 (erb);
+- CSS 3 (scss);
+- Ruby 2.6.3;
+- Rails 6.0.1.
 
-* Configuration
+## Authors
 
-* Database creation
+:woman: **Bruna Genz**
 
-* Database initialization
+- Github: [@bruna-genz](https://github.com/bruna-genz)
 
-* How to run the test suite
+:man: **Nicolás Mariño**
 
-* Services (job queues, cache servers, search engines, etc.)
-
-* Deployment instructions
-
-* ...
+- Github: [@nicolasmarino99](https://github.com/nicolasmarino99)
