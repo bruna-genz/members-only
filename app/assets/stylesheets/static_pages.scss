@@ -1,3 +1,17 @@
-// Place all the styles related to the StaticPages controller here.
-// They will automatically be included in application.css.
-// You can use Sass (SCSS) here: https://sass-lang.com/
+@import "_variables.scss";
+@import "_mixins.scss";
+
+.home-content {
+    display: grid;
+    margin-top: 8em;
+    margin-left: 20em;
+    font-family: $font;
+    .big-title {
+        font-size: 50px;
+        font-weight: bold;
+    }
+    p {
+        margin-top: 25px;
+        font-size: 20px;
+    }
+}
