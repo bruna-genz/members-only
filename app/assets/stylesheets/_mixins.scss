@@ -2,3 +2,7 @@
     margin: red;
     background-color: rgba(255, 0, 0, 0.507);
 }
+@mixin button-style {
+    background-image: linear-gradient(90deg,#ff8a00,#e52e71);
+    border: solid 2px white;   
+}
