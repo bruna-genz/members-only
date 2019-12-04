@@ -22,7 +22,9 @@
       <div><i class="icon fas fa-play-circle"></i><%= link_to "Videos", static_pages_videos_path %></div>
       <div><i class="icon fas fa-map"></i><%= link_to "Guides", static_pages_guides_path  %></div>
       <div id="search-box">
-          <input type="search">
+          <input id="searchbar"type="search" placeholder="e.g my first post">
+          <input id="search" type="button" >
+          <i class="fas fa-search" id="speciali"></i>
       </div>
     </nav>
     <%= yield %>
