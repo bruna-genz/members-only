@@ -1,0 +1,15 @@
+@mixin box_sizing {
+    -moz-box-sizing:    border-box;
+    -webkit-box-sizing: border-box;
+    box-sizing:         border-box;
+  }
+  
+  .debug_dump {
+    clear: both;
+    float: left;
+    margin-left: 15em;
+    margin-top: 45px;
+    background-color: lightgrey;
+    color: black;
+    @include box_sizing;
+  }
