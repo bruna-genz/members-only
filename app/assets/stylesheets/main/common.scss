@@ -1,3 +1,4 @@
+@import "semantic-ui";
 @import "../_variables.scss";
 @import "../_mixins.scss";
 
@@ -49,6 +50,19 @@ body  {
         }
         #yellow-icon {
             color: $yellow;
+        }
+    }
+    .compact {
+        background-color: $black;
+        border-bottom: solid thin rgba(68, 67, 67, 0.411);
+        border-left: solid thin rgba(68, 67, 67, 0.411);
+        border-radius: 0;
+    }
+    .item {
+        border: none;
+        margin-top: 1em;
+        p {
+            color: white;
         }
     }
     #logo {
@@ -106,6 +120,7 @@ body  {
             height: 40px;
             width: 40px;
             margin: 10px;
+            color: white;
         }
     }
     .hover-div {
