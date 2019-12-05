@@ -1,6 +1,7 @@
 @import "_variables.scss";
 @import "_mixins.scss";
 
+/*    Buttons      */
 .button {
     @include button-style;
     display: flex;
@@ -15,4 +16,36 @@
     color: white;
     align-items: center;
     justify-content: center;   
+}
+
+/*    Titles      */
+.big-title {
+    font-size: 50px;
+    font-weight: bold;
+    width: 100%;
+    font-family: $font;
+    &:hover {
+        background: -webkit-linear-gradient(90deg,#ff8a00,#e52e71);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        cursor: pointer;
+    }
+}
+
+/*    Debug errors      */
+#error_explanation {
+    width: 90%;
+}
+
+.red-background {
+    background-color: rgba(161, 1, 1, 0.493);
+    height: 2em;
+    border-radius: 10px;
+    text-align: center;
+    padding-top: 0.5em;
+}
+
+.error-list {
+    color: rgba(204, 3, 3, 0.815);
+    margin: 1em;
 }

@@ -6,17 +6,6 @@
     margin-top: 10%;
     margin-left: 10%;
     font-family: $font;
-    .big-title {
-        font-size: 50px;
-        font-weight: bold;
-        width: 100%;
-        &:hover {
-            background: -webkit-linear-gradient(90deg,#ff8a00,#e52e71);
-            -webkit-background-clip: text;
-            -webkit-text-fill-color: transparent;
-            cursor: pointer;
-        }
-    }
     p {
         font-size: 18px;
         font-weight: lighter;
