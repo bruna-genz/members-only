@@ -49,3 +49,17 @@
     color: rgba(204, 3, 3, 0.815);
     margin: 1em;
 }
+
+.alert-danger {
+    display: flex;
+    background-color: rgba(133, 0, 0, 0.459);
+    color: rgb(247, 149, 149);
+    justify-content: center;
+    align-self: center;
+    align-items: center;
+    
+    margin: auto;
+    margin-top: 2em;
+    width: 50%;
+    height: 4em;
+}
