@@ -131,6 +131,19 @@ body  {
     }
 }
 
+/*      Forms       */
 
+.inline {
+    display: flex;
+    width: 90%;
+    align-items: center;
+    justify-content: center;
+    #session_remember_me {
+        width: 5%;
+    }
+    span {
+        margin-left: 1em;
+    }
+}
     
     
