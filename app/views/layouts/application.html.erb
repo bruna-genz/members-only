@@ -27,10 +27,7 @@
               <div class="item"><%= link_to "Log out", sessions_destroy_path, method: :delete %></div>
             </div>
           </div>
-        </div>
-
-
-       
+        </div>    
         
         
         <div class="hover-div"><i id="orange-icon" class="icon fas fa-newspaper"></i><%= link_to "Posts", '#' %></div>
@@ -38,7 +35,7 @@
         <div class="hover-div"><i id="purple-icon" class="icon fas fa-envelope-open-text"></i><%= link_to "Newsletter", static_pages_newsletter_path %></div>
         <div class="hover-div"><i id="blue-icon" class="icon fas fa-briefcase"></i><%= link_to "Jobs", static_pages_jobs_path %></div>
         <div class="hover-div"><i id="green-icon" class="icon fas fa-play-circle"></i><%= link_to "Videos", static_pages_videos_path %></div>
-        <div class="hover-div"><i id="yellow-icon" class="icon fas fa-map"></i><%= link_to "Guides", static_pages_guides_path  %></div>
+        <div class="hover-div"><i id="yellow-icon" class="icon fas fa-users"></i><%= link_to "All Users", users_path  %></div>
 
       <% else %>
         <div class="hover-div"><i id="pink-icon" class="icon fas fa-door-open"></i><%= link_to "Login", sessions_new_path %></div>
@@ -47,7 +44,7 @@
         <div class="hover-div"><i id="purple-icon" class="icon fas fa-envelope-open-text"></i><%= link_to "Newsletter", static_pages_newsletter_path %></div>
         <div class="hover-div"><i id="blue-icon" class="icon fas fa-briefcase"></i><%= link_to "Jobs", static_pages_jobs_path %></div>
         <div class="hover-div"><i id="green-icon" class="icon fas fa-play-circle"></i><%= link_to "Videos", static_pages_videos_path %></div>
-        <div class="hover-div"><i id="yellow-icon" class="icon fas fa-map"></i><%= link_to "Guides", static_pages_guides_path  %></div>
+        <div class="hover-div"><i id="yellow-icon" class="icon fas fa-users"></i><%= link_to "All Users", users_path  %></div>
       <% end %>
       
       <div id="search-box">
