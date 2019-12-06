@@ -5,6 +5,7 @@ ruby '2.6.3'
 
 # Custom
 gem 'semantic-ui-sass', github: 'doabit/semantic-ui-sass'
+gem 'faker'
 
 gem 'bootstrap-sass' 
 # Bundle edge Rails instead: gem 'rails', github: 'rails/rails'
