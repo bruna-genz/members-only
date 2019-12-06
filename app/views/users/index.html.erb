@@ -1,5 +1,6 @@
 <div class=list-container>
     <h1 class="big-title">All users</h1>
+    <%= will_paginate @collection, renderer: WillPaginateSemanticUi::ActionView::Renderer %>
     <ul class="users">
     <% @users.each do |user| %>
         <li>
@@ -8,4 +9,6 @@
         </li>
     <% end %>
     </ul>
+    
+    <%= will_paginate @collection, renderer: WillPaginateSemanticUi::ActionView::Renderer %>
 </div>
