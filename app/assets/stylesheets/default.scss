@@ -32,6 +32,20 @@
     }
 }
 
+.medium-title {
+    font-size: 30px;
+    text-align: center;
+    font-weight: bold;
+    width: 100%;
+    font-family: $font;
+    &:hover {
+        background: -webkit-linear-gradient(90deg,#ff8a00,#e52e71);
+        -webkit-background-clip: text;
+        -webkit-text-fill-color: transparent;
+        cursor: pointer;
+    }
+}
+
 /*    Debug errors      */
 #error_explanation {
     width: 90%;

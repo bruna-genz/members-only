@@ -1,4 +1,9 @@
 <div class="home-content">
+ <% if logged_in? %>
+ <h1 class="big-title">Welcome <%= current_user.name.capitalize %>to Members Only blog</h1>
+    
+<% else %>
+ 
     <h1 class="big-title">Welcome to Members Only blog</h1>
     <%= link_to "Sign up", new_user_path, class: "button" %>
     <p>
@@ -6,3 +11,4 @@
         Anyone can read it, but just the members will know who wrote it.
     </p>
 </div>
+<% end %>
