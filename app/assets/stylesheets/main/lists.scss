@@ -16,12 +16,18 @@
         list-style: none;
         padding-bottom: 2em;
         align-items: baseline;
+        justify-content: space-around;
         a {
             margin-left: 1em;
             align-self: center;
             font-size: 25px;
             color: white;
             font-family: $font;
+        }
+        .red-background {
+            font-size: 15px;
+            padding-left: 1em;
+            padding-right: 1em;
         }
     }
 }
