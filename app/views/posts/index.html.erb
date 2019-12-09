@@ -1,2 +1,13 @@
-<h1>Posts#index</h1>
-<p>Find me in app/views/posts/index.html.erb</p>
+<div class=list-container>
+    <h1 class="big-title">Posts</h1>
+    
+    <%= will_paginate @collection, renderer: WillPaginateSemanticUi::ActionView::Renderer %>
+   
+    <ul>
+        <% @posts.each do |post| %>
+            <%= render post %>
+        <% end %>
+    </ul>
+    
+    <%= will_paginate @collection, renderer: WillPaginateSemanticUi::ActionView::Renderer %>
+</div>

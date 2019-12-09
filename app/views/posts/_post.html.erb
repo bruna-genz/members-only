@@ -1,0 +1,11 @@
+<li>
+    <% if !current_user.nil? %>
+        <%= gravatar_for post.user, size: 50%>
+        <%= post.user.name %>
+    <% end %>
+    <%= post.title %>
+    <%= post.content %>
+</li>
+
+
+
