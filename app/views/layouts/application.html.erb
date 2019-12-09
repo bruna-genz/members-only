@@ -19,7 +19,7 @@
       <% if logged_in? %>        
         <div class="ui compact menu hover-div">
           <div class="ui simple dropdown item">
-            <i id="orange-icon" class="icon fas fa-user"></i>
+            <i id="pink-icon" class="icon fas fa-user"></i>
             <p>Account</p>
             <div class="menu">
               <div class="item"><%= link_to "Profile", current_user %></div>
@@ -30,7 +30,7 @@
         </div>    
         
         
-        <div class="hover-div"><i id="orange-icon" class="icon fas fa-newspaper"></i><%= link_to "Posts", posts_path %></div>
+        <%= link_to posts_path do %><div class="hover-div"><i id="orange-icon" class="icon fas fa-newspaper"></i>Posts</div><% end %>
         <div class="hover-div"><i id="red-icon" class="icon fas fa-code"></i><%= link_to "Snippets", static_pages_snippets_path %></div>
         <div class="hover-div"><i id="purple-icon" class="icon fas fa-envelope-open-text"></i><%= link_to "Newsletter", static_pages_newsletter_path %></div>
         <div class="hover-div"><i id="blue-icon" class="icon fas fa-briefcase"></i><%= link_to "Jobs", static_pages_jobs_path %></div>
@@ -39,7 +39,7 @@
 
       <% else %>
         <div class="hover-div"><i id="pink-icon" class="icon fas fa-door-open"></i><%= link_to "Login", sessions_new_path %></div>
-        <div class="hover-div"><i id="orange-icon" class="icon fas fa-newspaper"></i><%= link_to "Posts", '#' %></div>
+        <%= link_to posts_path do %><div class="hover-div"><i id="orange-icon" class="icon fas fa-newspaper"></i>Posts</div><% end %>
         <div class="hover-div"><i id="red-icon" class="icon fas fa-code"></i><%= link_to "Snippets", static_pages_snippets_path %></div>
         <div class="hover-div"><i id="purple-icon" class="icon fas fa-envelope-open-text"></i><%= link_to "Newsletter", static_pages_newsletter_path %></div>
         <div class="hover-div"><i id="blue-icon" class="icon fas fa-briefcase"></i><%= link_to "Jobs", static_pages_jobs_path %></div>

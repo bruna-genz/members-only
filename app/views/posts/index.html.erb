@@ -3,7 +3,7 @@
     
     <%= will_paginate @collection, renderer: WillPaginateSemanticUi::ActionView::Renderer %>
    
-    <ul>
+    <ul class=posts>
         <% @posts.each do |post| %>
             <%= render post %>
         <% end %>

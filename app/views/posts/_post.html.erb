@@ -1,10 +1,14 @@
 <li>
-    <% if !current_user.nil? %>
-        <%= gravatar_for post.user, size: 50%>
-        <%= post.user.name %>
+    <% if logged_in? %>
+        <div class="author">
+            <p><%= gravatar_for post.user, size: 70 %></p>
+            <p id="author-name"><%= post.user.name %></p>
+        </div>
     <% end %>
-    <%= post.title %>
-    <%= post.content %>
+    <div class="post-details">
+        <p id="post-title"><%= post.title %></p>
+        <p id="post-content"><%= post.content %></p>
+    </div>
 </li>
 
 
