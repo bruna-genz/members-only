@@ -10,6 +10,7 @@ class PostsController < ApplicationController
   def create
     @post = current_user.posts.create(post_params)
     if @post.save
+      flash[:success] = "Your post was created"
       redirect_to posts_path
     else
       render 'new'
@@ -17,7 +18,7 @@ class PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.paginate(page: params[:page])
+    @posts = Post.paginate(page: params[:page], :per_page => 5)
   end
 
   private

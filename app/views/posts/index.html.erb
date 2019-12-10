@@ -11,11 +11,13 @@
 
         <% if logged_in? %>
             <%= link_to new_post_path do %>
-                <div class="button">Create a new post</div>
+                <div class="button" id="btm-post">Create a new post</div>
             <% end %>
         <% end %>
 
-        <p> Do you want to see the authors name of this posts?. please sign in <%=link_to "here", sessions_new_path %>.</p>
+        <% if !logged_in? %>
+            <p> Do you want to see the authors name of this posts? Please sign in <%=link_to "here", sessions_new_path %>.</p>
+        <% end %>
     
     <%= will_paginate @collection, renderer: WillPaginateSemanticUi::ActionView::Renderer %>
 </div>

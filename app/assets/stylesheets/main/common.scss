@@ -32,25 +32,33 @@ body  {
     &:hover {
         #orange-icon {
             color: $orange;
+            @include transition-color;
         }
         #pink-icon {
             color: $pink;
+            @include transition-color;
         }
         #red-icon {
             color: $red;
+            @include transition-color;
         }
         #purple-icon {
             color: $purple;
+            @include transition-color;
         }
         #blue-icon {
             color: $blue;
+            @include transition-color;
         }
         #green-icon {
             color: $green;
+            @include transition-color;
         }
         #yellow-icon {
             color: $yellow;
+            @include transition-color;
         }
+        
     }
     .compact {
         background-color: $black;
@@ -130,6 +138,10 @@ body  {
         &:hover {
             background-color: $lightblack;
             cursor: pointer;
+            -webkit-transition: background-color 0.5s ease-out;
+            -moz-transition: background-color 0.5s ease-out;
+            -o-transition: background-color 0.5s ease-out;
+            transition: background-color 0.5s ease-out;
         }
     }
 }
