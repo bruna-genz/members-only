@@ -53,11 +53,9 @@ class UsersController < ApplicationController
   end
 
   def logged_in_user
-    unless logged_in?
-      store_location
-      flash[:danger] = 'You must log in'
-      redirect_to sessions_new_path
-    end
+    store_location unless logged_in?
+    flash[:danger] = 'You must log in' unless logged_in?
+    redirect_to sessions_new_path unless logged_in?
   end
 
   def correct_user

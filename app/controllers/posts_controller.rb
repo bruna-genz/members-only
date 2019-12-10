@@ -10,7 +10,7 @@ class PostsController < ApplicationController
   def create
     @post = current_user.posts.create(post_params)
     if @post.save
-      flash[:success] = "Your post was created"
+      flash[:success] = 'Your post was created'
       redirect_to posts_path
     else
       render 'new'
@@ -18,7 +18,7 @@ class PostsController < ApplicationController
   end
 
   def index
-    @posts = Post.paginate(page: params[:page], :per_page => 5)
+    @posts = Post.paginate(page: params[:page], per_page: 5)
   end
 
   private
@@ -28,10 +28,8 @@ class PostsController < ApplicationController
   end
 
   def logged_in_user
-    unless logged_in?
-      store_location
-      flash[:danger] = 'You must log in'
-      redirect_to sessions_new_path
-    end
+    store_location unless logged_in?
+    flash[:danger] = 'You must log in' unless logged_in?
+    redirect_to sessions_new_path unless logged_in?
   end
 end
