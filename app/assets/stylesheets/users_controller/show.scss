@@ -9,4 +9,14 @@
 #gravatar-user {
     margin-left: 15em;
     margin-top: 45px;
+    display: flex;
+    #btm-container {
+        margin-left: 4em;
+        .button {
+            width: 120%
+        }
+        #first-btm {
+            margin-top: 0;
+        }
+    }
 }
