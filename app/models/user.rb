@@ -15,7 +15,7 @@ class User < ApplicationRecord
 
   has_many :posts
 
-  def User.new_token
+  def self.new_token
     SecureRandom.urlsafe_base64
   end
 
@@ -29,9 +29,8 @@ class User < ApplicationRecord
     update_attribute(:remember_digest, nil)
   end
 
-
-    def create_remember_token
-      self.remember_token = User.new_token
-      self.remember_digest = Digest::SHA1.hexdigest(remember_token)
-    end
+  def create_remember_token
+    self.remember_token = User.new_token
+    self.remember_digest = Digest::SHA1.hexdigest(remember_token)
+  end
 end
