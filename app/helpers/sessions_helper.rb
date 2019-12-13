@@ -1,42 +1,28 @@
 # frozen_string_literal: true
 
 module SessionsHelper
-  def log_in(user)
-    session[:user_id] = user.id
+  def sign_in(user)
+    remember_token = User.new_token
+    cookies.permanent[:remember_token] = remember_token
+    user.update_attribute(:remember_digest, remember_token)
+    current_user = user
   end
-
-  def remember(user)
-    user.create_remember_token
-    cookies.permanent.signed[:user_id] = user.id
-    cookies.permanent[:remember_token] = user.remember_token
+  
+  def current_user=(user)
+    @current_user = user
   end
-
-  def forget(user)
-    user.forget
-    cookies.delete(:user_id)
-    cookies.delete(:remember_token)
+  
+  def current_user
+    @current_user ||= User.find_by(remember_digest: cookies.permanent[:remember_token]) if cookies.permanent[:remember_token]
   end
 
   def log_out
-    forget(current_user)
-    session.delete(:user_id)
-    @current_user = nil
+    cookies.delete(:remember_token)
+    current_user = nil
   end
 
   def current_user?(user)
-    user == current_user
-  end
-
-  def current_user
-    if (user_id = session[:user_id])
-      @current_user ||= User.find_by(id: user_id)
-    elsif (user_id = cookies.signed[:user_id])
-      user = User.find_by(id: user_id)
-      if user&.authenticated?(cookies[:remember_token])
-        log_in user
-        @current_user = user
-      end
-    end
+    user == @current_user
   end
 
   def logged_in?
@@ -44,11 +30,11 @@ module SessionsHelper
   end
 
   def redirect_back_or(default)
-    redirect_to(session[:forwarding_url] || default)
-    session.delete(:forwarding_url)
+    redirect_to(cookies[:forwarding_url] || default)
+    cookies.delete(:forwarding_url)
   end
 
   def store_location
-    session[:forwarding_url] = request.original_url if request.get?
+    cookies[:forwarding_url] = request.original_url if request.get?
   end
 end
