@@ -12,7 +12,8 @@ module SessionsHelper
   end
 
   def current_user
-    @current_user ||= User.find_by(remember_digest: cookies.permanent[:remember_token]) if cookies.permanent[:remember_token]
+    cookies_token = cookies.permanent[:remember_token]
+    @current_user ||= User.find_by(remember_digest: cookies_token) if cookies_token
   end
 
   def log_out
