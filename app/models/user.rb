@@ -19,14 +19,8 @@ class User < ApplicationRecord
     SecureRandom.urlsafe_base64
   end
 
-  def authenticated?(remember_token)
-    return false if remember_digest.nil?
-
-    BCrypt::Password.new(remember_digest).is_password?(remember_token)
-  end
-
   def create_remember_token
-    self.remember_token = User.new_token
+    remember_token = User.new_token
     self.remember_digest = Digest::SHA1.hexdigest(remember_token)
   end
 end
