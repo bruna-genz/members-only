@@ -9,6 +9,8 @@ In this app we created a blog where users can post comments, but only members ca
 
 ## Preview
 
+### [Live version](https://afternoon-depths-57944.herokuapp.com/posts)
+
 ![Alt text](app/assets/images/members-only-home.png "Optional title")
 
 ## Built with
