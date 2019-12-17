@@ -7,6 +7,10 @@ In this app we created a blog where users can post comments, but only members ca
 - Remember logged in users;
 - Create new posts.
 
+## Preview
+
+![Alt text](app/assets/images/members-only-home.png "Optional title")
+
 ## Built with
 
 - HTML 5 (erb);
